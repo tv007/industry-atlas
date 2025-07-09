@@ -1,0 +1,162 @@
+[
+  {
+    "id": "energy",
+    "name": "Energy",
+    "description": "Power generation, distribution, and energy services including fossil fuels, renewables, and nuclear power.",
+    "icon": "⚡",
+    "sectors": [
+      "oil-and-gas",
+      "renewable-energy",
+      "nuclear-power",
+      "electricity-generation",
+      "energy-storage",
+      "energy-trading"
+    ],
+    "market_cap": 4500000000000,
+    "growth_rate": 2.8,
+    "employment": 6500000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "technology",
+    "name": "Technology",
+    "description": "Software development, hardware manufacturing, and digital services including AI, cloud computing, and cybersecurity.",
+    "icon": "💻",
+    "sectors": [
+      "software-development",
+      "hardware-manufacturing",
+      "artificial-intelligence",
+      "cloud-computing",
+      "cybersecurity",
+      "semiconductors"
+    ],
+    "market_cap": 8500000000000,
+    "growth_rate": 8.5,
+    "employment": 12000000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "healthcare",
+    "name": "Healthcare",
+    "description": "Medical services, pharmaceuticals, biotechnology, and health technology including hospitals, drugs, and medical devices.",
+    "icon": "🏥",
+    "sectors": [
+      "pharmaceuticals",
+      "biotechnology",
+      "medical-devices",
+      "healthcare-services",
+      "digital-health",
+      "health-insurance"
+    ],
+    "market_cap": 3200000000000,
+    "growth_rate": 4.2,
+    "employment": 18000000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "finance",
+    "name": "Finance",
+    "description": "Banking, insurance, investment services, and financial technology including traditional and digital financial services.",
+    "icon": "💰",
+    "sectors": [
+      "banking",
+      "insurance",
+      "investment-services",
+      "fintech",
+      "real-estate-finance",
+      "cryptocurrency"
+    ],
+    "market_cap": 2800000000000,
+    "growth_rate": 3.1,
+    "employment": 8500000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "manufacturing",
+    "name": "Manufacturing",
+    "description": "Industrial production, automotive, aerospace, and advanced manufacturing including automation and smart factories.",
+    "icon": "🏭",
+    "sectors": [
+      "automotive",
+      "aerospace",
+      "electronics-manufacturing",
+      "chemical-manufacturing",
+      "textile-manufacturing",
+      "food-processing"
+    ],
+    "market_cap": 3800000000000,
+    "growth_rate": 1.8,
+    "employment": 14000000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "retail",
+    "name": "Retail",
+    "description": "Consumer goods, e-commerce, and retail services including traditional stores, online marketplaces, and logistics.",
+    "icon": "🛍️",
+    "sectors": [
+      "e-commerce",
+      "brick-and-mortar-retail",
+      "fashion-retail",
+      "grocery-retail",
+      "luxury-retail",
+      "retail-technology"
+    ],
+    "market_cap": 2500000000000,
+    "growth_rate": 3.5,
+    "employment": 16000000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "transportation",
+    "name": "Transportation",
+    "description": "Logistics, mobility, and transportation services including shipping, aviation, railways, and emerging mobility solutions.",
+    "icon": "🚚",
+    "sectors": [
+      "logistics",
+      "aviation",
+      "railways",
+      "shipping",
+      "mobility-services",
+      "autonomous-vehicles"
+    ],
+    "market_cap": 1800000000000,
+    "growth_rate": 2.9,
+    "employment": 9500000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  },
+  {
+    "id": "agriculture",
+    "name": "Agriculture",
+    "description": "Farming, food production, and agricultural technology including crop farming, livestock, and precision agriculture.",
+    "icon": "🌾",
+    "sectors": [
+      "crop-farming",
+      "livestock",
+      "agricultural-technology",
+      "food-processing",
+      "agricultural-chemicals",
+      "precision-agriculture"
+    ],
+    "market_cap": 1200000000000,
+    "growth_rate": 2.1,
+    "employment": 11000000,
+    "trends_url": "/trends/global",
+    "academics_url": "/academics/impact",
+    "technology_url": "/technology/readiness-levels"
+  }
+] 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} - {% endif %}Industry Atlas</title>
+    <meta name="description" content="{{ description or 'Comprehensive industry mapping and analysis platform' }}">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% if title %}{{ title }} - {% endif %}Industry Atlas">
+    <meta property="og:description" content="{{ description or 'Comprehensive industry mapping and analysis platform' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absoluteUrl }}">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if title %}{{ title }} - {% endif %}Industry Atlas">
+    <meta name="twitter:description" content="{{ description or 'Comprehensive industry mapping and analysis platform' }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/components.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/">
+                        <h1>Industry Atlas</h1>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="/">Overview</a></li>
+                        <li><a href="/pages/supplychain/evolution/">Supply Chain</a></li>
+                        <li><a href="/pages/technology/readiness-levels/">Technology</a></li>
+                        <li><a href="/pages/companies/leaders/">Companies</a></li>
+                        <li><a href="/pages/trends/emerging/">Trends</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search industries..." id="search-input">
+                        <button type="button" id="search-btn">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filters Bar -->
+    <div class="filters-bar">
+        <div class="container">
+            <div class="filters-content">
+                <div class="filter-group">
+                    <label for="industry-filter">Industry:</label>
+                    <select id="industry-filter">
+                        <option value="">All Industries</option>
+                        {% for industry in industries %}
+                        <option value="{{ industry.id }}">{{ industry.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="jurisdiction-filter">Jurisdiction:</label>
+                    <select id="jurisdiction-filter">
+                        <option value="global">Global</option>
+                        <option value="us">United States</option>
+                        <option value="eu">European Union</option>
+                        <option value="asia">Asia Pacific</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="timeframe-filter">Timeframe:</label>
+                    <select id="timeframe-filter">
+                        <option value="1y">1 Year</option>
+                        <option value="5y">5 Years</option>
+                        <option value="10y">10 Years</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    {% if breadcrumbs %}
+    <nav class="breadcrumbs">
+        <div class="container">
+            <ul>
+                <li><a href="/">Home</a></li>
+                {% for crumb in breadcrumbs %}
+                <li>
+                    {% if crumb.url %}
+                    <a href="{{ crumb.url }}">{{ crumb.name }}</a>
+                    {% else %}
+                    <span>{{ crumb.name }}</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            {{ content | safe }}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Industry Atlas</h3>
+                    <p>Comprehensive industry mapping and analysis platform</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Industry Overview</a></li>
+                        <li><a href="/pages/trends/emerging/">Emerging Trends</a></li>
+                        <li><a href="/pages/technology/readiness-levels/">Technology Readiness</a></li>
+                        <li><a href="/pages/companies/leaders/">Industry Leaders</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul>
+                        <li>Wikipedia Industry Outlines</li>
+                        <li>Financial Market Data</li>
+                        <li>Academic Publications</li>
+                        <li>Corporate Information</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/industry-atlas/industry-atlas.github.io">GitHub</a></li>
+                        <li><a href="/api">API</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; {{ buildTime.getFullYear() }} Industry Atlas. Data updated: {{ buildTime | formatDate }}</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/main.js"></script>
+    <script src="/js/charts.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/filters.js"></script>
+</body>
+</html> 

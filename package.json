@@ -1,0 +1,47 @@
+{
+  "name": "industry-atlas",
+  "version": "1.0.0",
+  "description": "A comprehensive industry mapping and analysis platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site",
+    "scrape": "node scripts/scrapers/index.js",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write src/**/*.{js,md,html,css}",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "industry",
+    "atlas",
+    "mapping",
+    "analysis",
+    "static-site"
+  ],
+  "author": "Industry Atlas Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-bundle": "^1.0.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "chart.js": "^4.4.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^3.3.1",
+    "jsdom": "^24.0.0",
+    "node-cron": "^3.0.3"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+} 
+
